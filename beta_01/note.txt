@@ -1,0 +1,6 @@
+scp -r user@remote_host:/path/to/remote/directory /path/to/local/directory
+
+ssh cloud_user@54.241.47.101 "cd /home/cloud_user/demo/camp_demo_3 && tar --exclude='terraform*' -czf - ." > camp_demo_3.tar.gz
+tar -xzf camp_demo_3.tar.gz -C /path/to/local/directory
+
+scp /path/to/local/file.txt user@remote_host:/path/to/remote/directory/
